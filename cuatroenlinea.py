@@ -29,9 +29,15 @@ def dibujar_tablero(tablero):
                 print(' %s ' %columna, end='')
         print('')
             
-secuencia = [1, 2, 3, 1]
-dibujar_tablero(
-        completar_tablero_orden(
-            secuencia, tablero_vacio()
-    )
-)
+def validar_secuencia(secuencia):
+    for columna in secuencia:
+        if columna < 1 or columna > 7:
+            return False
+    return True
+
+
+secuencia = [7, 2, 2, 3, 1]
+if validar_secuencia(secuencia):
+    dibujar_tablero(completar_tablero_orden(secuencia, tablero_vacio()))
+else:
+    print("Secuencia no válida, las columnas deben estar entre los valores 1 al 7")
