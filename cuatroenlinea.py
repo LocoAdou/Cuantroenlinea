@@ -36,7 +36,7 @@ def validar_secuencia(secuencia):
     return True
 
 
-secuencia = [7, 2, 2, 3, 1]
+secuencia = [7, 4, 2, 1, 4]
 if validar_secuencia(secuencia):
     dibujar_tablero(completar_tablero_orden(secuencia, tablero_vacio()))
 else:
