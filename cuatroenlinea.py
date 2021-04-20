@@ -42,8 +42,10 @@ def contenido_columna(nro_columna, tablero):
         columna.append(celda)
     return columna
 
-
-secuencia = [2, 4, 2, 1, 4, 2, 3, 1, 2]
+def contenido_fila(nro_fila, tablero):
+    return tablero[nro_fila-1]
+    
+secuencia = [1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7]
 
 tablero = []
 if validar_secuencia(secuencia):
@@ -51,5 +53,7 @@ if validar_secuencia(secuencia):
     dibujar_tablero(tablero)
 
     print(contenido_columna(2, tablero))
+#    print("%s",)
+    print(contenido_fila(1, tablero))
 else:
     print("Secuencia no válida, las columnas deben estar entre los valores 1 al 7")
